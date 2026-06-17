@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PowerFit Gym</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Custom CSS -->
+<style>
+
+:root{
+    --primary:#ff4d00;
+    --dark:#111;
+    --light:#f8f9fa;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x:hidden;
+}
+
+/* Navbar */
+
+.navbar{
+    background:#000;
+}
+
+.navbar-brand{
+    font-size:2rem;
+    font-weight:bold;
+    color:var(--primary)!important;
+}
+
+.nav-link{
+    color:white!important;
+    margin-left:15px;
+    transition:0.3s;
+}
+
+.nav-link:hover{
+    color:var(--primary)!important;
+}
+
+/* Hero */
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:4rem;
+    font-weight:800;
+}
+
+.hero span{
+    color:var(--primary);
+}
+
+.btn-custom{
+    background:var(--primary);
+    color:white;
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+}
+
+.btn-custom:hover{
+    background:#d63f00;
+    color:white;
+}
+
+/* Section */
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-weight:700;
+    color:#111;
+}
+
+.section-title p{
+    color:#666;
+}
+
+/* Features */
+
+.feature-card{
+    text-align:center;
+    padding:30px;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.feature-card i{
+    font-size:50px;
+    color:var(--primary);
+    margin-bottom:20px;
+}
+
+/* Membership */
+
+.plan-card{
+    border:none;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.plan-card:hover{
+    transform:scale(1.05);
+}
+
+.plan-header{
+    background:var(--primary);
+    color:white;
+    padding:25px;
+}
+
+.price{
+    font-size:3rem;
+    font-weight:bold;
+}
+
+/* Trainers */
+
+.trainer-card{
+    overflow:hidden;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.trainer-card img{
+    height:350px;
+    object-fit:cover;
+}
+
+.trainer-card:hover{
+    transform:translateY(-8px);
+}
+
+.social-icons i{
+    color:var(--primary);
+    margin:0 8px;
+    font-size:20px;
+}
+
+/* Inquiry */
+
+.inquiry{
+    background:#111;
+    color:white;
+}
+
+.form-control{
+    padding:12px;
+}
+
+/* Testimonials */
+
+.testimonial{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* Footer */
+
+footer{
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+footer span{
+    color:var(--primary);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+
+<a class="navbar-brand" href="#">
+<i class="fa-solid fa-dumbbell"></i> PowerFit
+</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+<li class="nav-item"><a href="#programs" class="nav-link">Programs</a></li>
+<li class="nav-item"><a href="#plans" class="nav-link">Plans</a></li>
+<li class="nav-item"><a href="#trainers" class="nav-link">Trainers</a></li>
+<li class="nav-item"><a href="#contact" class="nav-link">Inquiry</a></li>
+</ul>
+</div>
+
+</div>
+</nav>
+
+<!-- Hero -->
+
+<section class="hero" id="home">
+<div class="container">
+<div class="row">
+<div class="col-lg-7">
+
+<h1>Transform Your Body With <span>PowerFit Gym</span></h1>
+
+<p class="lead my-4">
+Join the best fitness community with certified trainers,
+modern equipment, personalized programs, and affordable memberships.
+</p>
+
+<a href="#plans" class="btn btn-custom me-3">
+Join Now
+</a>
+
+<a href="#contact" class="btn btn-outline-light">
+Free Consultation
+</a>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- Programs -->
+
+<section class="py-5" id="programs">
+<div class="container">
+
+<div class="section-title">
+<h2>Fitness Programs</h2>
+<p>Choose a workout program that matches your goals.</p>
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-3">
+<div class="feature-card shadow-sm">
+<i class="fa-solid fa-dumbbell"></i>
+<h4>Strength Training</h4>
+<p>Build muscle and improve body strength.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="feature-card shadow-sm">
+<i class="fa-solid fa-heart-pulse"></i>
+<h4>Cardio Fitness</h4>
+<p>Burn calories and improve endurance.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="feature-card shadow-sm">
+<i class="fa-solid fa-person-running"></i>
+<h4>Weight Loss</h4>
+<p>Customized fat-loss workout plans.</p>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="feature-card shadow-sm">
+<i class="fa-solid fa-child-reaching"></i>
+<h4>Yoga & Mobility</h4>
+<p>Improve flexibility and mental wellness.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Membership Plans -->
+
+<section class="py-5 bg-light" id="plans">
+<div class="container">
+
+<div class="section-title">
+<h2>Membership Plans</h2>
+<p>Affordable plans for everyone.</p>
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card plan-card shadow">
+
+<div class="plan-header text-center">
+<h3>Basic</h3>
+</div>
+
+<div class="card-body text-center">
+<div class="price">₹999</div>
+<p>Per Month</p>
+
+<ul class="list-unstyled">
+<li>✔ Gym Access</li>
+<li>✔ Locker Facility</li>
+<li>✔ Fitness Assessment</li>
+</ul>
+
+<button class="btn btn-custom">Choose Plan</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card plan-card shadow">
+
+<div class="plan-header text-center">
+<h3>Premium</h3>
+</div>
+
+<div class="card-body text-center">
+<div class="price">₹1999</div>
+<p>Per Month</p>
+
+<ul class="list-unstyled">
+<li>✔ Personal Trainer</li>
+<li>✔ Diet Plan</li>
+<li>✔ Group Classes</li>
+</ul>
+
+<button class="btn btn-custom">Choose Plan</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card plan-card shadow">
+
+<div class="plan-header text-center">
+<h3>Elite</h3>
+</div>
+
+<div class="card-body text-center">
+<div class="price">₹2999</div>
+<p>Per Month</p>
+
+<ul class="list-unstyled">
+<li>✔ VIP Access</li>
+<li>✔ Dedicated Coach</li>
+<li>✔ Nutrition Guidance</li>
+</ul>
+
+<button class="btn btn-custom">Choose Plan</button>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Trainers -->
+
+<section class="py-5" id="trainers">
+<div class="container">
+
+<div class="section-title">
+<h2>Meet Our Trainers</h2>
+<p>Certified experts helping you achieve your goals.</p>
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card trainer-card shadow">
+<img src="https://images.unsplash.com/photo-1567013127542-490d757e6349?w=800" class="card-img-top">
+<div class="card-body text-center">
+<h4>Rahul Sharma</h4>
+<p>Strength Coach</p>
+<div class="social-icons">
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-linkedin"></i>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card trainer-card shadow">
+<img src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?w=800" class="card-img-top">
+<div class="card-body text-center">
+<h4>Priya Patel</h4>
+<p>Yoga Expert</p>
+<div class="social-icons">
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-linkedin"></i>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card trainer-card shadow">
+<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800" class="card-img-top">
+<div class="card-body text-center">
+<h4>Arjun Mehta</h4>
+<p>Fitness Trainer</p>
+<div class="social-icons">
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-linkedin"></i>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Testimonials -->
+
+<section class="py-5 bg-light">
+<div class="container">
+
+<div class="section-title">
+<h2>Success Stories</h2>
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="testimonial">
+<p>"Lost 12kg in 4 months with PowerFit trainers."</p>
+<h5>- Amit</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="testimonial">
+<p>"Excellent facilities and motivating atmosphere."</p>
+<h5>- Sneha</h5>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="testimonial">
+<p>"Best gym experience with professional coaching."</p>
+<h5>- Karan</h5>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Inquiry Form -->
+
+<section class="py-5 inquiry" id="contact">
+<div class="container">
+
+<div class="section-title text-white">
+<h2>Online Inquiry</h2>
+<p>Get in touch with us today.</p>
+</div>
+
+<div class="row justify-content-center">
+<div class="col-lg-8">
+
+<form>
+
+<div class="row g-3">
+
+<div class="col-md-6">
+<input type="text" class="form-control" placeholder="Full Name">
+</div>
+
+<div class="col-md-6">
+<input type="email" class="form-control" placeholder="Email">
+</div>
+
+<div class="col-md-6">
+<input type="tel" class="form-control" placeholder="Phone Number">
+</div>
+
+<div class="col-md-6">
+<select class="form-control">
+<option>Select Program</option>
+<option>Weight Loss</option>
+<option>Strength Training</option>
+<option>Yoga</option>
+<option>Cardio</option>
+</select>
+</div>
+
+<div class="col-12">
+<textarea class="form-control" rows="5" placeholder="Message"></textarea>
+</div>
+
+<div class="col-12 text-center">
+<button class="btn btn-custom">
+Submit Inquiry
+</button>
+</div>
+
+</div>
+
+</form>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Footer -->
+
+<footer>
+<p>
+© 2025 <span>PowerFit Gym</span> | Stronger Every Day
+</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
